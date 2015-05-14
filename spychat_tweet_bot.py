@@ -4,7 +4,7 @@ import requests
 from TwitterAPI import TwitterAPI, TwitterConnectionError, TwitterRequestError
 
 
-_TARGETS = "16298441,318339237,125386940,3194560656"
+_TARGETS = "16298441,318339237,125386940,3194560656,20951512,407895022,159121042,94719490,381730775"
 """Comma delimited list of userids to follow."""
 
 
