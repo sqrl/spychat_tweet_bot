@@ -28,7 +28,9 @@ while True:
                 # Ignore retweets of this content:
                 if tweeter_id not in speakers:
                     continue
-
+                # Ignore retweets by the users.
+                if 'retweeted_status' in item:
+                    continue
                 tweet_url = u"https://twitter.com/{}/status/{}".format(tweeter_login, item['id_str'])
 
                 payload = {"text": u"{}: <{}>".format(tweeter, tweet_url),
