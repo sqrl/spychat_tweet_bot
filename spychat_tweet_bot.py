@@ -4,7 +4,7 @@ import requests
 from TwitterAPI import TwitterAPI, TwitterConnectionError, TwitterRequestError
 
 
-_TARGETS = "16298441,318339237,125386940,3194560656,407895022,159121042,381730775,15143478,59157393"
+_TARGETS = "16298441,318339237,125386940,3194560656,407895022,159121042,381730775,15143478,59157393,1122192223"
 """Comma delimited list of userids to follow."""
 
 
@@ -30,6 +30,9 @@ while True:
                     continue
                 # Ignore retweets by the users.
                 if 'retweeted_status' in item:
+                    continue
+                
+                if 'in_reply_to_screen_name' in item and item['in_reply_to_screen_name']:
                     continue
                 tweet_url = u"https://twitter.com/{}/status/{}".format(tweeter_login, item['id_str'])
 
