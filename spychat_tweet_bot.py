@@ -4,9 +4,19 @@ import requests
 from TwitterAPI import TwitterAPI, TwitterConnectionError, TwitterRequestError
 
 
-_TARGETS = "299820130,246318475,16298441,318339237,125386940,3194560656,407895022,159121042,381730775,15143478,59157393,1122192223"
-"""Comma delimited list of userids to follow."""
-
+_TARGETS = {
+    '@TriciaLockwood': 299820130,
+    '@dril': 16298441,
+    '@ActualPerson084': 318339237,
+    '@drugleaf': 125386940,
+    '@arealliveghost': 407895022,
+    '@wolfpupy': 159121042,
+    '@RichardDawkins': 15143478,
+    '@tomfriedman': 59157393,
+    '@_FloridaMan': 1122192223,
+    '@SeinfeldToday': 1000262514,
+    '@RikerGoogling': 2341337263
+}
 
 with open("CREDENTIALS.json") as f:
     credentials = json.load(f)
@@ -16,17 +26,16 @@ api = TwitterAPI(credentials["consumer-key"],
                  credentials["access-token"],
                  credentials["access-token-secret"])
 
-speakers = _TARGETS.split(',')
 while True:
     try:
-        i = api.request('statuses/filter', {'follow': _TARGETS}).get_iterator()
+        i = api.request('statuses/filter', {'follow': ",".join(map(str, _TARGETS.values()))}).get_iterator()
         for item in i:
             if 'text' in item:
                 tweeter = item['user']['name']
                 tweeter_login = item['user']['screen_name']
                 tweeter_id = item['user']['id_str']
                 # Ignore retweets of this content:
-                if tweeter_id not in speakers:
+                if tweeter_id not in _TARGETS.values():
                     continue
                 # Ignore retweets by the users.
                 if 'retweeted_status' in item:
