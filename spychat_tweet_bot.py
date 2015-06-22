@@ -35,7 +35,7 @@ while True:
                 tweeter_login = item['user']['screen_name']
                 tweeter_id = item['user']['id_str']
                 # Ignore retweets of this content:
-                if tweeter_id not in _TARGETS.values():
+                if tweeter_id not in map(str, _TARGETS.values()):
                     continue
                 # Ignore retweets by the users.
                 if 'retweeted_status' in item:
