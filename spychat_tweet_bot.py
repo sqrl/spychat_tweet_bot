@@ -8,7 +8,6 @@ _TARGETS = {
     '@TriciaLockwood': 299820130,
     '@dril': 16298441,
     '@ActualPerson084': 318339237,
-    '@drugleaf': 125386940,
     '@arealliveghost': 407895022,
     '@wolfpupy': 159121042,
     '@RichardDawkins': 15143478,
