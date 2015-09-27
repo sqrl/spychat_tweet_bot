@@ -19,6 +19,7 @@ _TARGETS = {
     '@leyawn': 49708023,
     '@justinetunney': 370418635,
     '@weedhitler': 125386940,
+    '@crushingbort': 188587219,
 }
 
 with open("CREDENTIALS.json") as f:
