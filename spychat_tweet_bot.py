@@ -10,7 +10,6 @@ _TARGETS = {
     '@ActualPerson084': 318339237,
     '@arealliveghost': 407895022,
     '@wolfpupy': 159121042,
-    '@RichardDawkins': 15143478,
     '@tomfriedman': 59157393,
     '@_FloridaMan': 1122192223,
     '@SeinfeldToday': 1000262514,
