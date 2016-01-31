@@ -16,12 +16,11 @@ _TARGETS = {
     '@famouscrab': 385412164,
     '@KingRainhead': 142733065,
     '@leyawn': 49708023,
-    '@justinetunney': 370418635,
     '@weedhitler': 125386940,
     '@crushingbort': 188587219,
     '@jon_bois': 70739029,
-    '@richarddawkins': 15143478,
-    '@moldbuggery': 463831168,
+    '@dubstep4dads': 1245320090,
+    '@buckyisotope': 402181679,
 }
 
 with open("CREDENTIALS.json") as f:
