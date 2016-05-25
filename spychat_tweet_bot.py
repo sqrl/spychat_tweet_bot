@@ -21,7 +21,6 @@ _TARGETS = {
     '@RoboRosewater': 3242711672,
     '@greenlightgold': 795510488,
     '@recruiterbro': 1255218984,
-    '@weasyldev': 924674858,
     '@thewarnerd': 860222796,
     '@getfiscal': 24254680,
     '@thef35': 292615553,
