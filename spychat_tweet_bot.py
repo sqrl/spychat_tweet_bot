@@ -15,15 +15,17 @@ _TARGETS = {
     '@famouscrab': 385412164,
     '@KingRainhead': 142733065,
     '@leyawn': 49708023,
-    '@buckyisotope': 402181679,
     '@RichardDawkins': 15143478,
     '@RoboRosewater': 3242711672,
     '@greenlightgold': 795510488,
-    '@recruiterbro': 1255218984,
-    '@thewarnerd': 860222796,
-    '@thef35': 292615553,
-    '@probirdrights': 448476934,
     '@erowidrecruiter': 2999876456,
+    '@hedgehogdays':  1714874952,
+    '@_fox_bot': 2930505258,
+    '@cybershell': 28955214,
+    '@mikefossey': 1960031863,
+    '@wutanggoku': 119145557,
+    '@getfiscal': 24254680,
+    '@pisspiggranddad': 445330799,
 }
 
 with open("CREDENTIALS.json") as f:
@@ -48,8 +50,10 @@ while True:
                 # Ignore retweets by the users.
                 if 'retweeted_status' in item:
                     continue
-                
                 if 'in_reply_to_screen_name' in item and item['in_reply_to_screen_name']:
+                    continue
+                # Curious cat is spammy, so ignore those:
+                if 'https://curiouscat.me' in item['text']:
                     continue
                 tweet_url = u"https://twitter.com/{}/status/{}".format(tweeter_login, item['id_str'])
 
