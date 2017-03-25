@@ -53,7 +53,7 @@ while True:
                 if 'in_reply_to_screen_name' in item and item['in_reply_to_screen_name']:
                     continue
                 # Curious cat is spammy, so ignore those:
-                if 'https://curiouscat.me' in item['text']:
+                if 'source' in item and 'curiouscat.me' in item['source']:
                     continue
                 tweet_url = u"https://twitter.com/{}/status/{}".format(tweeter_login, item['id_str'])
 
